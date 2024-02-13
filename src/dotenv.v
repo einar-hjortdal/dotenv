@@ -41,7 +41,7 @@ fn add_to_env(dot_env map[string]string) {
 
 // load read settings from .env file if it exists in the current working directory,
 // any key-value pair read in the .env file is then added to the environment
-fn load() {
+pub fn load() {
 	if os.exists('.env') {
 		dot_env := parse_dot_env()
 		add_to_env(dot_env)
